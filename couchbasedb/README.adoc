@@ -1,0 +1,8 @@
+= Couchbase Server
+
+Repository that allows you to deploy https://www.couchbase.com/[Couchbase] in Kubernetes or OpenShift
+
+== Deploying in Kubernetes
+
+
+== Deploying in OpenShift

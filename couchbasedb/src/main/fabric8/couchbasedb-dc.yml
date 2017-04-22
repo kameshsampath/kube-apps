@@ -1,0 +1,29 @@
+---
+apiVersion: "extensions/v1beta1"
+kind: "Deployment"
+metadata:
+  labels: {}
+  name: ${project.build.finalName}
+spec:
+  replicas: 1
+  template:
+    spec:
+      containers:
+      - name: ${project.build.finalName}
+        image: arungupta/couchbase
+        ports:
+        - containerPort: 8091
+          name: "http"
+        - containerPort: 8092
+          name: "p8902"
+        - containerPort: 8093
+          name: "p8903"
+        - containerPort: 11210
+          name: "p11210"
+        resources:
+          limits:
+            cpu: "0"
+            memory: "0"
+          requests:
+            cpu: "0"
+            memory: "0"
